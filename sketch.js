@@ -7,7 +7,7 @@ var stack = [];
 
 function setup()
 {
-	frameRate(20);
+	frameRate(30);
 	createCanvas(600, 600);
 	noStroke();
 	
