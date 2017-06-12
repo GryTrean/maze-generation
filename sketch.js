@@ -5,6 +5,10 @@ var current;
 
 var stack = [];
 
+//Sliders
+var fpsSlider;
+//--
+
 function setup()
 {
 	frameRate(30);
@@ -25,6 +29,14 @@ function setup()
 		}
 	}
 	current = cells[0];
+
+	fpsSlider = createSlider(1, 120, 30, 1);
+	fpsSlider.changed(fpschange);
+}
+
+function fpschange()
+{
+	frameRate(fpsSlider.value());
 }
 
 function draw()
